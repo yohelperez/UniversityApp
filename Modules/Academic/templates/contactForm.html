@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Form</title>
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        
+    </head>
+    <body>
+        <h3>Contact Us</h3>
+        <form action="/contact/" method= "POST">{% csrf_token %}
+            <p>Subject: <input type="text" name="txtSubject"/> </p>
+            <p>Email: <input type="email" name="txtEmail"/> </p>
+            <p>
+                Message: 
+                <textarea name="txtMessage" rows="5" cols="30" style="resize: none;"></textarea>
+            </p>
+            <input type="submit" style="background-color: #008CBA; color:white; border-radius:5px; border-style: groove"
+             value="Send"/>
+
+            
+        </form>
+
+    </body>
+</html>
